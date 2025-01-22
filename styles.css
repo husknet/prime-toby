@@ -10,23 +10,25 @@ body {
 }
 
 #app {
-  width: 300px;
+  width: 350px; /* Keep the block size larger */
   background: white;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  padding: 40px; /* Keep the block padding larger */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adjusted for larger block */
+  border-radius: 20px; /* Slightly increased for larger block */
 }
 
 /* Logo Container */
 .logo-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 20px; /* Adds spacing between logos */
+  margin-bottom: 40px;
 }
 
 .logo-container img {
-  width: 40px;
-  height: 40px;
+  width: 60px; /* Size for logos */
+  height: 60px;
 }
 
 /* Form Group Styling */
@@ -37,34 +39,35 @@ body {
 label {
   display: block;
   font-size: 14px;
-  margin-bottom: 5px; /* Add spacing below the label */
+  margin-bottom: 20px;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+  height: 35px; /* Reverted to smaller size */
+  padding: 10px; /* Reverted to original padding */
+  border: 1px solid #ddd; /* Original border */
   border-radius: 5px;
-  margin-top: 5px;
-  font-size: 14px;
+  font-size: 14px; /* Original font size */
   box-sizing: border-box;
-  background: #f9f9f9; /* Light background for the input */
+  background: #f9f9f9;
 }
 
 input:focus {
   border-color: #007bff;
   outline: none;
-  background: #fff; /* Highlighted background on focus */
+  background: #fff;
 }
 
 button {
   width: 100%;
-  padding: 10px;
+  height: 35px; /* Reverted to smaller size */
+  padding: 10px; /* Reverted to original padding */
   background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 14px; /* Original font size */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -82,19 +85,20 @@ button:hover:not(:disabled) {
 .profile-info {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Add space between email and password input */
+  margin-bottom: 20px; /* Reduced for smaller fields */
 }
 
 .profile-info img {
-  width: 40px;
+  width: 40px; /* Reverted to smaller size */
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
+/* Error Text */
 .error-text {
   color: red;
-  font-size: 12px;
+  font-size: 12px; /* Reduced to original size */
   margin-top: 5px;
 }
 
@@ -113,14 +117,14 @@ button:hover:not(:disabled) {
 
 .modal-content {
   background: white;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 20px; /* Smaller padding for modal */
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow for modal */
 }
 
 .modal-content p {
-  font-size: 16px;
+  font-size: 16px; /* Reverted font size */
   font-weight: bold;
   margin: 0;
 }
